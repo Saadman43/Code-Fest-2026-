@@ -1,10 +1,10 @@
-# 🧠 EEG-Based Neuro-Symbolic Brain-Computer Interface
+#  EEG-Based Neuro-Symbolic Brain-Computer Interface
 
 An end-to-end **neuro-symbolic deep learning** pipeline for decoding **overt and imagined speech** from EEG signals, designed for robot control via brain-computer interface (BCI).
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project classifies EEG signals recorded during **spoken (overt)** and **imagined (silent)** speech interactions with a simulated robot. It combines a neural EEG encoder with a **learnable symbolic reasoning layer** that enforces logical constraints (e.g., don't repeat the same command, don't navigate to a blocked direction) directly within the training loop.
 
@@ -44,7 +44,7 @@ Both losses are backpropagated jointly, making symbolic rules *trainable*, not h
 
 ---
 
-## 🗂️ Dataset
+##  Dataset
 
 - **Format:** MNE-compatible `.fif` files, one per participant
 - **Events:** Overt and silent speech for 5 robot commands
@@ -56,7 +56,7 @@ Both losses are backpropagated jointly, making symbolic rules *trainable*, not h
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 All key hyperparameters are centralized in the `CONFIG` dictionary:
 
@@ -77,7 +77,7 @@ All key hyperparameters are centralized in the `CONFIG` dictionary:
 
 ---
 
-## 🔬 Pipeline
+##  Pipeline
 
 ### Stage 1 — Overt Speech Training
 1. Load and preprocess `.fif` files with MNE (bandpass filter, CAR reference, epoch extraction)
@@ -99,7 +99,7 @@ Each prediction produces a human-readable trace showing:
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 ```bash
 pip install torch numpy pandas matplotlib scikit-learn mne scipy
@@ -144,7 +144,7 @@ Python 3.8+ recommended. GPU (CUDA or Intel XPU) supported automatically.
 
 ---
 
-## 📊 Model Zoo (Backbone Comparison)
+##  Model Zoo (Backbone Comparison)
 
 The notebook includes a benchmark cell comparing multiple EEG deep learning backbones:
 
@@ -156,7 +156,7 @@ Benchmarks run for 5 epochs each and report accuracy, balanced accuracy, and F1-
 
 ---
 
-## 🧩 Key Design Choices
+##  Key Design Choices
 
 - **End-to-end symbolic learning:** Symbolic rules are *not* post-hoc corrections — they are differentiable parameters trained via backpropagation alongside the neural encoder.
 - **Memory-safe data loading:** Two-pass loading strategy — lightweight scan first, then per-subject epoch extraction with RAM caps and disk-backed memmaps for large datasets.
@@ -166,7 +166,7 @@ Benchmarks run for 5 epochs each and report accuracy, balanced accuracy, and F1-
 
 ---
 
-## 📁 File Structure
+##  File Structure
 
 ```
 .
@@ -181,13 +181,13 @@ Benchmarks run for 5 epochs each and report accuracy, balanced accuracy, and F1-
 
 ---
 
-## 📄 License
+##  License
 
 This project is released for research and academic use. Please cite appropriately if you build on this work.
 
 ---
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 - Neural architecture inspired by [EEGNet (Lawhern et al., 2018)](https://arxiv.org/abs/1611.08024)
 - Neuro-symbolic learning framework designed for BCI explainability and constraint satisfaction
