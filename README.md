@@ -122,8 +122,7 @@ Python 3.8+ recommended. GPU (CUDA or Intel XPU) supported automatically.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/eeg-neurosymbolic-bci.git
-   cd eeg-neurosymbolic-bci
+   git clone [https://github.com/Saadman43/Code-Fest-2026-)
    ```
 
 2. **Install dependencies**
@@ -132,10 +131,7 @@ Python 3.8+ recommended. GPU (CUDA or Intel XPU) supported automatically.
    ```
 
 3. **Set your data path** — open the notebook and update:
-   ```python
-   CONFIG["data_root"] = "/path/to/your/eeg/fif/files"
-   CONFIG["event_json_path"] = "/path/to/event_names.json"
-   ```
+
 
 4. **Run the notebook**
    ```bash
@@ -170,11 +166,11 @@ Benchmarks run for 5 epochs each and report accuracy, balanced accuracy, and F1-
 
 ```
 .
-├── eeg_neurosymbolic_bci.ipynb   # Main notebook
+├── eeg_neurosymbolic_bci.ipynb   
 ├── README.md
-└── data/                         # Not included — provide your own .fif files
+└── data/                         
     ├── event_names.json
-    ├── montage.bvef               # Optional
+    ├── montage.bvef              
     └── participant_*/
         └── *.fif
 ```
@@ -188,7 +184,5 @@ This project is released for research and academic use. Please cite appropriatel
 ---
 
 ##  Acknowledgements
-
-- Neural architecture inspired by [EEGNet (Lawhern et al., 2018)](https://arxiv.org/abs/1611.08024)
 - Neuro-symbolic learning framework designed for BCI explainability and constraint satisfaction
 - EEG data recorded during spoken and imagined speech interaction with a simulated robot
