@@ -118,7 +118,7 @@ Python 3.8+ recommended. GPU (CUDA or Intel XPU) supported automatically.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. **Clone the repository**
    ```bash
