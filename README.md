@@ -12,7 +12,7 @@ The model is first trained on overt speech EEG, then **transferred** to imagined
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 EEG Signal (channels × time)
